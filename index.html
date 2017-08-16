@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>ferguson tweets</title>
+
+		<meta name="description" content="A brief discussion of collecting Ferguson Twitter data">
+		<meta name="author" content="Ed Summers">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+
+	</head>
+
+	<body>
+
+    <div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides">
+
+        <section>
+          <h2>Documenting the Now</h2>
+          Social Media and the Archival Imagination<br>
+          <br>
+          <br>
+          <div style="font-size: smaller;">
+          Ed Summers<br>
+          University of Maryland<br>
+          edsu@umd.edu / <a href="https://twitter.com/edsu">@edsu</a>
+          </div>
+        </section>
+
+        <section>
+          <h3>Overview</h3>
+          <ol>
+            <li>The Archive</li>
+            <li>BlackLivesMatter</li>
+            <li>Documenting the Now</li>
+          </ol>
+        </section>
+
+        <section data-background="img/archive.jpg">
+        </section>
+
+        <section>
+          <p>
+            The library is a growing organism.
+          </p>
+          <p>
+          <br>
+          <cite>
+          <a href="https://en.wikipedia.org/wiki/S._R._Ranganathan">S. R.
+            Ranganathan</a><br><a href="https://en.wikipedia.org/wiki/Five_laws_of_library_science">Five Laws of Library Science</a>
+          </p>
+          </cite>
+        </section>
+
+        <section>
+            <p>The existence, preservation and availability of archives, documents, records in our society are very much determined by the distribution of wealth and power. That is, the most powerful, the richest elements in society have the greatest capacity to find documents, preserve them, and decide what is or is not available to the public. This means government, business and the military are dominant.</p>
+            <br>
+            <cite>
+            <a href="https://en.wikipedia.org/wiki/Howard_Zinn">Howard Zinn</a>
+            <br>
+            <a href="https://minds.wisconsin.edu/handle/1793/44118"> Secrecy, Archives, and the Public Interest </a>
+            </cite>
+        </section>
+
+        <section data-background="img/hands-up.jpg">
+          <aside class="notes">
+            <p>Talk about technical and ethical issues related to providing access to a Ferguson social media collection. Interested in hearing about different approaches people come up with since this is a relatively new area for archival research and practice.</p>
+            <blockquote>the existence, preservation and availability of archives, documents, records in our society are very much determined by the distribution of wealth and power. That is, the most powerful, the richest elements in society have the greatest capacity to find documents, preserve them, and decide what is or is not available to the public. This means government, business and the military are dominant.</blockquote>
+          </aside>
+        </section>
+
+        <section data-background="img/zeynep.png">
+          <aside class="notes">
+            Zeynep Tufekci (UNC iSchool) muses on the ways that algorithms
+            shape the media, and our experience. Twitter, and BlackTwitter
+            provides an unprecedented view into a community that has been
+            denied a voice in mainstream media.
+          </aside>
+        </section>
+
+        <section>
+          <a href="https://dev.twitter.com/rest/public"><img src="img/api.png"></a>
+        </section>
+
+        <section>
+          <code style="color: #00ff00; font-size: 36pt;">
+            % twarc search ferguson
+          </code>
+        </section>
+
+        <section>
+          <code style="color: #00ff00; font-size: 36pt;">
+            % twarc filter ferguson
+          </code>
+        </section>
+
+        <section>
+          <h2>13,480,00 tweets</h2>
+          <p>August 10, 2014 - August 27, 2014</p>
+          <aside class="notes">
+          </aside>
+        </section>
+
+        <section>
+          <img src="img/tweet-graph.png">
+          <aside class="notes">
+          </aside>
+        </section>
+
+        <section>
+          <h1>63G of <a target="_new" href="tweet.html">JSON</a></h1>
+          <h2 class="fragment">8.4G compressed</h2>
+          <aside class="notes">
+          Technical accessibility issues. How do you provide access to this
+          content?
+          </aside>
+        </section>
+
+        <section>
+          <h3>Not just 140 characters</h3>
+          <ul>
+            <li class="fragment">time</li>
+            <li class="fragment">hashtags</li>
+            <li class="fragment">geo coordinates</li>
+            <li class="fragment">places</a>
+            <li class="fragment">embedded media</li>
+            <li class="fragment">retweet</li>
+            <li class="fragment">reply to</li>
+            <li class="fragment">user</li>
+            <li class="fragment">profile</li>
+            <li class="fragment">avatar</li>
+            <li class="fragment">follower count</li>
+            <li class="fragment">Twitter API</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2><a target="_new" href="tweet.html">JSON</a></h2>
+          <aside class="notes">
+          Anatomy of a tweet. Twitter's documentation is quite good.
+          </aside>
+        </section>
+
+        <section>
+          <h3><a target="_new" href="https://edsu.github.io/ferguson-urls/">August 10-27, 2014</a></h3>
+          <p>417,972 Unique Unshortened URLs</p>
+          <aside class="notes">
+          </aside>
+        </section>
+
+        <section>
+          <h3><a href="https://edsu.github.io/ferguson-tweet-viewer/" target="_new">UMD Ferguson<br>Town Hall Meeting</a></h3>
+          <p>
+          December 3, 2014
+          </p>
+          <aside class="notes">
+          Random imagery from tweets used as a backdrop for the townhall meeting.
+          </aside>
+        </section>
+
+        <section data-background="img/teachins.png">
+        </section>
+
+        <section>
+          <h2><a href="http://timemapper.okfnlabs.org/edsu/blacklivesmatter">#BlackLivesMatter</a></h2>
+        </section>
+
+        <section>
+          <a href="https://www.docnow.io"><img src="img/docnow.png"></a>
+        </section>
+
+        <section>
+          <img src="img/slack.png">
+        </section>
+
+        <section>
+          <img src="img/tos1.png">
+        </section>
+
+        <section>
+          <img src="img/tos2.png">
+          <aside class="notes">
+            Explain how only IDs can be shared, and how you can 
+            rehydrate data. 
+          </aside>
+        </section>
+
+        <section>
+          <img src="img/hydrator.png">
+        </section>
+
+        <section>
+          <a href="http://demo.docnow.io"><img src="img/app.png"></a>
+        </section>
+
+        <section>
+        <h3>Want to get involved?</h3>
+        <br>
+        <p>http://www.docnow.io</p>
+        <br>
+        <p>Join our Slack, mailing list &amp; follow us on Twitter</p>
+        </section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
